@@ -1,25 +1,53 @@
-function mergeSort(data){
-    if (data.length < 2) 
-        return data;
+function merge(arr, l, m, r) {
+    var n1 = m - l + 1;
+    var n2 = r - m;
 
-    let mid =  Math.ceil(data.length / 2), i, il, ir, left, right;
+    // Create temp arrays
+    var L = new Array(n1);
+    var R = new Array(n2);
 
-    left = mergeSort(data.slice(0, mid));
-    right = mergeSort(data.slice(mid));
+    // Copy data to temp arrays L[] and R[]
+    for (var i = 0; i < n1; i++)
+        L[i] = arr[l + i];
+    for (var j = 0; j < n2; j++)
+        R[j] = arr[m + 1 + j];
 
-    for (i = 0, il = 0, ir = 0; i < (left.length + right.length); i++){
-        if (left[il] < right[ir])
-            data[i] = left[il++];
-        else 
-            data[i] = right[ir++];
-        
+    var i = 0;
+    var j = 0;
+    var k = l;
 
-      	if (il == left.length)
-            for (i++; ir < right.length; ir++, i++)
-                data[i] = right[ir];
-        if (ir == right.length)
-            for (i++; il < left.length; il++, i++)
-                data[i] = left[il];
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        }
+        else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
     }
-    return data;
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
 }
+
+function mergeSort(arr, l, r) {
+    if (l >= r) {
+        return;
+    }
+    var m = l + parseInt((r - l) / 2);
+    mergeSort(arr, l, m);
+    mergeSort(arr, m + 1, r);
+    merge(arr, l, m, r);
+}
+
