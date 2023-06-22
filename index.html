@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Visual sorting</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://dimaglushkov.xyz/public/stb-favicon.ico">
+    <script src="https://d3js.org/d3.v5.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Visual Sorting</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li>
+                    <!-- <a id="currentAlgorithm" href="#algorithmSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle"></a> -->
+                    <ul class="list-unstyled collapse show" id="algorithmSubmenu">
+                    </ul>
+                </li>
+                <li>
+                    <form>
+                        <label for="delayRange" class="form-label">Delay:</label>
+                        <label for="delayRange" class="form-label range-value" id="delayRangeValue"></label>
+                        <input type="range" class="form-range" min="0" max="1000" id="delayRange">   
+                    </form>
+                </li>
+                <li>
+                    <form>
+                        <label for="arraySizeRange" class="form-label">Array size:</label>
+                        <label for="arraySizeRange" class="form-label range-value" id="arraySizeRangeValue"></label>
+                        <input type="range" class="form-range" min="1" max="150" id="arraySizeRange">   
+                    </form>
+                </li>
+            </ul>
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="#" class="start">Start</a>
+                </li>
+                <li>
+                    <a href="#" class="shuffle">Shuffle</a>
+                </li>
+                <li>
+                    <a href="#" class="download" id="source-code">Algorithm code</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="meta-content" >
+            <div class="table">
+                <div class="row header">
+                    <div class="cell">Best</div>
+                    <div class="cell">Average</div>
+                    <div class="cell">Worst</div>
+                    <div class="cell">Space</div>
+                    <div class="cell">Stable</div>
+                </div>
+                
+                <div class="row">
+                    <div class="cell" id="Best">blank</div>
+                    <div class="cell" id="Average">blank</div>
+                    <div class="cell" id="Worst">blank</div>
+                    <div class="cell" id="Memory">blank</div>
+                    <div class="cell" id="Stable">blank</div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <!-- Page Content  -->
+        <div class="chartHTML" id="content" >
+        </div>
+    </div>
+    <script type="module" src="js/core.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+{
+    "Bubble sort": {
+        "complexity":{
+            "Best": {
+                "val": "n",
+                "qual": "g"
+            },
+            "Average": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Worst": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Memory":{
+                "val": "1",
+                "qual": "g"
+            },
+            "Stable": {
+                "val": "Yes",
+                "qual": "g"
+            }
+        },
+        "source-code": "/assets/bubble-sort.js"
+    },
+    "Insertion sort": {
+        "complexity":{
+            "Best": {
+                "val": "n",
+                "qual": "g"
+            },
+            "Average": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Worst": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Memory":{
+                "val": "1",
+                "qual": "g"
+            },
+            "Stable": {
+                "val": "Yes",
+                "qual": "g"
+            }
+        },
+        "source-code": "/assets/insertion-sort.js"
+    },
+    "Selection sort": {
+        "complexity":{
+            "Best": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Average": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Worst": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Memory":{
+                "val": "1",
+                "qual": "g"
+            },
+            "Stable": {
+                "val": "No",
+                "qual": "b"
+            }
+        },
+        "source-code": "/assets/selection-sort.js"
+    },
+    "Merge sort": {
+        "complexity":{
+            "Best": {
+                "val": "n_log_n",
+                "qual": "n"
+            },
+            "Average": {
+                "val": "n_log_n",
+                "qual": "g"
+            },
+            "Worst": {
+                "val": "n_log_n",
+                "qual": "g"
+            },
+            "Memory":{
+                "val": "n",
+                "qual": "b"
+            },
+            "Stable": {
+                "val": "Yes",
+                "qual": "g"
+            }
+        },
+        "source-code": "/assets/merge-sort.js"
+    },
+    "Quick sort": {
+        "complexity":{
+            "Best": {
+                "val": "n_log_n",
+                "qual": "n"
+            },
+            "Average": {
+                "val": "n_log_n",
+                "qual": "g"
+            },
+            "Worst": {
+                "val": "n^2",
+                "qual": "b"
+            },
+            "Memory":{
+                "val": "log_n",
+                "qual": "n"
+            },
+            "Stable": {
+                "val": "No",
+                "qual": "b"
+            }
+        },
+        "source-code": "/assets/quick-sort.js"
+    },
+    "Heap sort": {
+        "complexity":{
+            "Best": {
+                "val": "n_log_n",
+                "qual": "n"
+            },
+            "Average": {
+                "val": "n_log_n",
+                "qual": "g"
+            },
+            "Worst": {
+                "val": "n_log_n",
+                "qual": "g"
+            },
+            "Memory":{
+                "val": "1",
+                "qual": "g"
+            },
+            "Stable": {
+                "val": "No",
+                "qual": "b"
+            }
+        },
+        "source-code": "/assets/heap-sort.js"
+    },
+
+    "Radix LSD sort": {
+        "complexity":{
+            "Best": {
+                "val": "nk",
+                "qual": "g"
+            },
+            "Average": {
+                "val": "nk",
+                "qual": "g"
+            },
+            "Worst": {
+                "val": "nk",
+                "qual": "g"
+            },
+            "Memory":{
+                "val": "n",
+                "qual": "b"
+            },
+            "Stable": {
+                "val": "Yes",
+                "qual": "g"
+            }
+        },
+        "source-code": "/assets/radix-lsd-sort.js"
+    }
+}
